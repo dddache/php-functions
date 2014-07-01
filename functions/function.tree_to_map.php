@@ -1,12 +1,12 @@
 <?php
 /**
- *  ´´½¨ ¸ù½Úµã Óë Ò¶×Ó½Úµãmap
+ *  åˆ›å»º æ ¹èŠ‚ç‚¹ ä¸Ž å¶å­èŠ‚ç‚¹map
  *  $kmap = Yii::app()->cache->get('kmap');
- *  $connection = Yii::app()->db;
- *  $sql = "SELECT id,pid FROM {{nodes}}";
- *  $command = $connection->createCommand($sql);
- *  $dataReader = $command->query();
  *  if(empty($kmap)){
+ *    $connection = Yii::app()->db;
+ *    $sql = "SELECT id,pid FROM {{nodes}}";
+ *    $command = $connection->createCommand($sql);
+ *    $dataReader = $command->query();
  *    $kmap = tree_to_map($dataReader);
  *    Yii::app()->cache->set('kmap', $kmap,24*3600*30);
  *  }
@@ -14,7 +14,7 @@
  */
 function tree_to_map($records){
     $rows = array();
-    //struct ×Ó½Úµã => ¸¸½Úµã
+    //struct å­èŠ‚ç‚¹ => çˆ¶èŠ‚ç‚¹
     foreach($records as $row){
         $rows[$row['id']] = $row['pid'];
     }
