@@ -8,11 +8,6 @@
 //       目前 FTP Message 以及 FTP CODE 并没有去详细解析。
 
 
-// 华图FTP服务器
-$ftp_server = '211.151.160.104';
-$ftp_user_name = 'ftp';
-$ftp_user_pass = 'vhuatu_2013';
-
     @ Doc转载自: http://blog.csdn.net/yxyhack/article/details/1826256
                  http://itec.hust.edu.cn/~liuwei/2014/2014fall-comnet/lab/lab4-TCP-FTP.pdf
 
@@ -299,7 +294,7 @@ class FTP{
     public static $password    = '';   // FTP密码
 
 
-    public function __construct ($host='211.151.160.104', $port=21, $user='ftp', $password='vhuatu_2013', $timeout=60){
+    public function __construct ($host='', $port=21, $user='', $password='', $timeout=60){
         // init socket .
         self::$socket = socket_create( AF_INET, SOCK_STREAM, SOL_TCP);
         socket_connect( self::$socket, $host, $port );
