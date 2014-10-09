@@ -1,0 +1,1 @@
+## some class for yii
