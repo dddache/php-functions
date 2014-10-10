@@ -39,7 +39,9 @@ class PDO_Mysql{//extends PDO
     }
     
     public function rollBack(){
-        return $this->handle->rollback();
+        $ret = $this->handle->rollback();
+        $this->handle->autocommit(TRUE);
+        return $ret;
     }
 
     public function errorCode(){
