@@ -22,6 +22,7 @@ Class
 -   FTP (raw command)
 -   VerifyCode
 -	Ustring ( String class )
+-   Requests ( HTTP Lib )
 
 About
 --------

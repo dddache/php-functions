@@ -104,6 +104,16 @@ class Ustring{
 
         //self::$string = $string;
     }
+    public function encode($encoding){
+        // 编码字符串
+        //mb_convert_encoding($string, 'ucs-4', 'utf-8');
+    }
+    public function decode($encoding){
+        // 解码字符串
+
+    }
+
+    
     public function detect(){
 
     }
