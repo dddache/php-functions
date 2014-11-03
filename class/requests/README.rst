@@ -41,7 +41,32 @@ Usage
         //              而不是 POST 采用的 URLENCODE 编码
         $response = Requests::put($url, $data, array( 'header'=>array('user-agent'=>'IM/TEST', 'Content-Type'=>'application/json') ) );
         # $response = Requests::put($url, json_encode($data), array( 'header'=>array('user-agent'=>'IM/TEST', 'Content-Type'=>'application/json') ) );
+        /*
+            // Response
+            
+            Array
+            (
+                [code] => 200
+                [reason] => OK
+                [header] => Array
+                    (
+                        [date] => Mon, 03 Nov 2014 08:46:28 GMT
+                        [server] => nginx/1.4.2
+                        [content-type] => application/json; charset=utf-8
+                        [content-length] => 24
+                        [content-encoding] => gzip
+                        [x-via] => 1.1 bjsb5:8101 (Cdn Cache Server V2.0), 1.1 xg48:5 (Cdn Cache Server V2.0)
+                        [connection] => keep-alive
+                    )
 
+                [cookies] => Array
+                    (
+                    )
+
+                [body] => "{}"
+            )
+
+        */
     ?>
 
 Require
