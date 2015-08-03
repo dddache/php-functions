@@ -4,11 +4,12 @@
  */
 function getDaysInMonth($year,$month){
   $days = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
-     if ($month == 1 &&  (!($year % 400) || (!($year % 4) && (!!$year % 100)))){
+     if ($month == 1 &&  (($year%4 == 0 && $year%100 != 0) || $year%400 == 0)){
         return 29;
      }
      return $days[$month];
 }
+
 /**
  * 最后截止为月,查询当月的
  * 最后截止为日,查询当日的
